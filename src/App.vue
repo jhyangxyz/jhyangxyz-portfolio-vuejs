@@ -18,5 +18,6 @@ export default {
 <style>
 #app {
   background-color: black;
+  font-family: 'Courier Prime', arial,serif;
 }
 </style>

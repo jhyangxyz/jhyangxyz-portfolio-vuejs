@@ -140,7 +140,7 @@ export default {
   display: inline-block;
   position: relative;
   top: 0;
-  left: 4px;
+  left: -6px;
 }
 
 .hidden {
