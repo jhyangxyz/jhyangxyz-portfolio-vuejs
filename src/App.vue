@@ -20,4 +20,11 @@ export default {
   background-color: black;
   font-family: 'Courier Prime', arial,serif;
 }
+.v-application .black.secondary--border {
+  border-color: var(--v-secondary-base) !important;
+}
+</style>
+
+<style lang="scss">
+
 </style>
