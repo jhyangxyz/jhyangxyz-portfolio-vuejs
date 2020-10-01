@@ -2,12 +2,12 @@
   <v-container fill-height fluid>
     <div class="d-flex container flex-column">
       <v-row class="text-center d-flex justify-center align-center">
-        <v-col class="col-6">
+        <v-col class="col-12 container-box">
           <who-am-i />
         </v-col>
       </v-row>
       <v-row class="d-flex justify-center align-center">
-        <v-col class="col-6">
+        <v-col class="col-12 container-box">
           <bash-top-layout>
             <template v-slot:title>
               What do I do ?
@@ -24,7 +24,7 @@
         </v-col>
       </v-row>
       <v-row class="d-flex justify-center align-center">
-        <v-col class="col-6">
+        <v-col class="col-12 container-box">
           <routing-command-line/>
         </v-col>
       </v-row>
@@ -49,5 +49,8 @@ export default {
 <style>
 .hidden {
   opacity: 0;
+}
+.container-box div {
+  max-width: 440px;
 }
 </style>
