@@ -7,5 +7,5 @@ stages:
 step-deploy-prod:
   stage: deploy
   script:
-    - docker build -t app/portfolio .
+    - docker build -t portfolio .
     - docker-compose -f docker-compose.yml up -d --build
