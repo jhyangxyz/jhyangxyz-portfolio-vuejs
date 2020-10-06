@@ -8,6 +8,7 @@ stages:
 
 step-deploy-prod:
   stage: deploy
+  before_script:
+    - docker info
   script:
-    - docker build -t portfolio .
     - docker-compose -f docker-compose.yml up -d --build
