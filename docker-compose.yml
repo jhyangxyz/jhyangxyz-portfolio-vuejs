@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.1'
 
 services:
   portfolio:
@@ -12,3 +12,10 @@ services:
       - "traefik.backend=portfolio"
       - "traefik.frontend.entryPoints=http,https"
       - "traefik.backend.priority = 2"
+    networks:
+      - reverse-proxy
+
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy

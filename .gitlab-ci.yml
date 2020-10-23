@@ -4,9 +4,23 @@ services:
   - docker:19.03.12-dind
 
 stages:
+  - build
   - deploy
 
+build site:
+  image: node:lts-alpine
+  stage: build
+  script:
+    - yarn install
+    - yarn build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+
+
 step-deploy-prod:
+  image: nginx:stable-alpine
   stage: deploy
   before_script:
     - docker info
