@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  portfolio:
+    container_name: portfolio
+    build:
+      context: ./
+    labels:
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:jhyang.xyz,www.jhyang.xyz"
+      - "traefik.port=80"
+      - "traefik.backend=portfolio"
+      - "traefik.frontend.entryPoints=http,https"
+      - "traefik.backend.priority = 2"
