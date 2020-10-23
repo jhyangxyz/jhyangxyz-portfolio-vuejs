@@ -40,7 +40,13 @@ export default {
   data() {
     return {
       commandLineText: "",
-      availableCommands: ["portfolio", "contact", "github", "linkedin"],
+      availableCommands: [
+        "portfolio",
+        "contact",
+        "github",
+        "linkedin",
+        "gitlab"
+      ],
       commandHistory: []
     };
   },
@@ -62,8 +68,13 @@ export default {
             window.location =
               "https://www.linkedin.com/in/jeong-heon-yang-625014a5/";
             break;
+          case "gitlab":
+            window.location = "https://gitlab.jhyang.xyz/jhyangxyz";
+            break;
           default:
-            this.commandHistory.push("$ Unkown command: " + this.commandLineText);
+            this.commandHistory.push(
+              "$ Unkown command: " + this.commandLineText
+            );
             break;
         }
       } else {
